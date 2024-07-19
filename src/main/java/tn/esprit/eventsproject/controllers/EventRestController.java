@@ -16,6 +16,10 @@ import java.util.List;
 public class EventRestController {
     private final IEventServices eventServices;
 
+    @GetMapping("/getAllEvents")public List<Event> getAllEvents() {
+        return eventServices.getAllEvents();
+    }
+
     @PostMapping("/addPart")
     public Participant addParticipant(@RequestBody Participant participant){
         return eventServices.addParticipant(participant);

@@ -123,5 +123,9 @@ public class EventServicesImpl implements IEventServices{
 
         }
     }
+    @Override
+    public List<Event> getAllEvents() {
+        return eventRepository.findAll();
+    }
 
 }
